@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homefrage"
+        android:title="Home"
+        android:icon="@drawable/home">
+    </item>
+
+    <item android:id="@+id/addStudent_Frag"
+        android:title="Add Student"
+        android:icon="@drawable/ic_add"
+        >
+    </item>
+
+    <item android:id="@+id/search_frag2"
+        android:title="Search"
+        android:icon="@drawable/search">
+    </item>
+
+    <item android:id="@+id/viewStudent_frag"
+        android:title="View"
+        android:icon="@drawable/view">
+    </item>
+</menu>

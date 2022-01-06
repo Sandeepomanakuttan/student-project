@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/homefrage">
+
+    <fragment
+        android:id="@+id/homefrage"
+        android:name="com.example.week2task2.homefrage"
+        android:label="fragment_homefrage"
+        tools:layout="@layout/fragment_homefrage" >
+        <action
+            android:id="@+id/action_homefrage_to_viewStudent_frag"
+            app:destination="@id/viewStudent_frag" />
+        <action
+            android:id="@+id/action_homefrage_to_addStudent_Frag"
+            app:destination="@id/addStudent_Frag" />
+        <action
+            android:id="@+id/action_homefrage_to_search_frag2"
+            app:destination="@id/search_frag2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStudent_Frag"
+        android:name="com.example.week2task2.AddStudent_Frag"
+        android:label="fragment_add_student_"
+        tools:layout="@layout/fragment_add_student_" >
+        <action
+            android:id="@+id/action_addStudent_Frag_to_homefrage"
+            app:destination="@id/homefrage" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewStudent_frag"
+        android:name="com.example.week2task2.ViewStudent_frag"
+        android:label="fragment_view_student_frag"
+        tools:layout="@layout/fragment_view_student_frag" >
+        <action
+            android:id="@+id/action_viewStudent_frag_to_homefrage"
+            app:destination="@id/homefrage" />
+        <action
+            android:id="@+id/action_viewStudent_frag_to_itemFragment"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/action_viewStudent_frag_to_itemFragmentCh"
+            app:destination="@id/itemFragmentCh" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.example.week2task2.ItemFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" />
+    <fragment
+        android:id="@+id/itemFragmentCh"
+        android:name="com.example.week2task2.ItemFragmentCh"
+        android:label="fragment_item_ch_list"
+        tools:layout="@layout/fragment_item_ch_list" />
+    <fragment
+        android:id="@+id/search_frag2"
+        android:name="com.example.week2task2.search_frag"
+        android:label="fragment_search_frag"
+        tools:layout="@layout/fragment_search_frag" >
+        <action
+            android:id="@+id/action_search_frag2_to_homefrage"
+            app:destination="@id/homefrage" />
+    </fragment>
+
+</navigation>
