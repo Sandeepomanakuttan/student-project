@@ -8,20 +8,20 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.week2task2.data.studentData
+import androidx.recyclerview.widget.ItemTouchHelper
+import com.example.week2task2.data.StudentDataCollection
+import com.google.firebase.database.*
 
 /**
  * A fragment representing a list of Items.
  */
 class ItemFragmentCh : Fragment(),RecyclerviewAdaptor.ClickLisner{
 
-    lateinit var arrayList: ArrayList<studentData>
+    lateinit var dbref:DatabaseReference
+    lateinit var arrayList: ArrayList<dataa>
     lateinit var adaptor:RecyclerviewAdaptor
-    lateinit var student: studentData
     lateinit var list:RecyclerView
     var count=0
-    val listdata:ArrayList<studentData> =ArrayList()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,33 +35,67 @@ class ItemFragmentCh : Fragment(),RecyclerviewAdaptor.ClickLisner{
         val view = inflater.inflate(R.layout.fragment_item_ch_list, container, false)
         val name= arrayOf("sandeep","arshid")
 
-        val image= arrayOf(android.R.drawable.ic_menu_add, android.R.drawable.ic_delete)
+        list=view.findViewById(R.id.list)
+        list.layoutManager= LinearLayoutManager(activity)
+        list.setHasFixedSize(true)
 
-        val reg= arrayOf(1,2)
+        arrayList= arrayListOf<dataa>()
+        getData()
 
-        if(count==0) {
+        val swipetodelete= object :SwipeToDelete(requireContext()){
 
-            for (i in name.indices) {
-               // listdata.add(studentData(reg[i], name[i], image[i]))
-                count++
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+
+                when(direction){
+
+                    ItemTouchHelper.LEFT->{
+
+                        adaptor.deleteItem(viewHolder.adapterPosition)
+
+                    }
+
+                    ItemTouchHelper.RIGHT->{
+
+                        adaptor.deleteItem(viewHolder.adapterPosition)
+
+
+                    }
+                }
 
             }
         }
 
-        list=view.findViewById(R.id.list)
-        list.layoutManager= LinearLayoutManager(activity)
-        adaptor= RecyclerviewAdaptor(listdata,this)
-        list.adapter=adaptor
+        val touchHelper = ItemTouchHelper(swipetodelete)
+        touchHelper.attachToRecyclerView(list)
 
         return view
     }
 
-    override fun onitemclick(data: studentData) {
+    private fun getData() {
 
-        var i= Intent(requireContext(),user::class.java)
-        i.putExtra("reg",data.Regno.toString())
-        i.putExtra("name",data.Name)
-       // i.putExtra("image",data.imageId)
+        dbref = FirebaseDatabase.getInstance().getReference("Student Details")
+        var query=dbref.orderByChild("department").equalTo("ch")
+        query.addValueEventListener(object: ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()){
+                    for (student in snapshot.children){
+                        var stddata =student.getValue(dataa::class.java)
+                        arrayList.add(stddata!!)
+                    }
+                    list.adapter=RecyclerviewAdaptor(arrayList,this@ItemFragmentCh)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+    }
+
+    override fun onitemclick(data: dataa) {
+
+        var i=Intent(requireContext(),user::class.java)
+        i.putExtra("regNo",data.regNo)
         startActivity(i)
 
     }

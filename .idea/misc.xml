@@ -26,10 +26,10 @@
         <entry key="..\:/week2task2/app/src/main/res/layout/activity_edit_page.xml" value="0.14835526315789474" />
         <entry key="..\:/week2task2/app/src/main/res/layout/activity_home_page.xml" value="0.2" />
         <entry key="..\:/week2task2/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/week2task2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/week2task2/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/week2task2/app/src/main/res/layout/activity_user.xml" value="0.15723684210526315" />
         <entry key="..\:/week2task2/app/src/main/res/layout/fragment_add_student.xml" value="0.1" />
-        <entry key="..\:/week2task2/app/src/main/res/layout/fragment_add_student_.xml" value="0.16" />
+        <entry key="..\:/week2task2/app/src/main/res/layout/fragment_add_student_.xml" value="0.2904841402337229" />
         <entry key="..\:/week2task2/app/src/main/res/layout/fragment_frag1.xml" value="0.1" />
         <entry key="..\:/week2task2/app/src/main/res/layout/fragment_homefrage.xml" value="0.264" />
         <entry key="..\:/week2task2/app/src/main/res/layout/fragment_item_ch_list.xml" value="0.1" />
@@ -38,7 +38,7 @@
         <entry key="..\:/week2task2/app/src/main/res/layout/fragment_search_frag.xml" value="0.15723684210526315" />
         <entry key="..\:/week2task2/app/src/main/res/layout/fragment_student_view.xml" value="0.15723684210526315" />
         <entry key="..\:/week2task2/app/src/main/res/layout/fragment_view_student_frag.xml" value="0.15723684210526315" />
-        <entry key="..\:/week2task2/app/src/main/res/layout/list_item.xml" value="0.136" />
+        <entry key="..\:/week2task2/app/src/main/res/layout/list_item.xml" value="0.1" />
         <entry key="..\:/week2task2/app/src/main/res/menu/nav_menu.xml" value="0.1" />
       </map>
     </option>

@@ -7,10 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
+import android.webkit.WebSettings
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +19,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val txt=findViewById<TextView>(R.id.txt);
+
+        txt.animate().apply {
+            duration=1000
+            rotationYBy(360f)
+        }.start()
 
 
         Handler().postDelayed(Runnable {

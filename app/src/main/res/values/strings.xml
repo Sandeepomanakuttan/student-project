@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">week 2 task2</string>
+    <string name="app_name">Student Record</string>
     <string name="welcome_n_back">Welcome \n Back</string>
     <string name="todo">TODO</string>
     <string name="password">Password</string>

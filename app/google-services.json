@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "420035258974",
+    "firebase_url": "https://student-record-85824-default-rtdb.firebaseio.com",
+    "project_id": "student-record-85824",
+    "storage_bucket": "student-record-85824.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420035258974:android:761013a33629671538e2cf",
+        "android_client_info": {
+          "package_name": "com.example.week2task2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420035258974-0l12kor3u8p9444i54sonrn1n6kd45qa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.week2task2",
+            "certificate_hash": "1308a0a9a0bd2eb34c0637730ededad81c2c8c9f"
+          }
+        },
+        {
+          "client_id": "420035258974-7nva1et83ffn7olicadhftlevc8743uu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4QyB1tXH3g3mVbZbQckpesU4-DAll0z8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420035258974-7nva1et83ffn7olicadhftlevc8743uu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

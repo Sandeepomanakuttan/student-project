@@ -25,5 +25,6 @@ class fragmentAdapter(fm:FragmentManager):FragmentStatePagerAdapter(fm,
     fun addFragment(frag : Fragment, title : String){
         fragmentlist.add(frag)
         fragmenttitle.add(title)
+
     }
 }

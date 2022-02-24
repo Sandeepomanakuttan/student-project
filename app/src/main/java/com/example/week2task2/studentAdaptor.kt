@@ -19,8 +19,6 @@ class studentAdaptor(private val context: Activity,
 
             val image:ImageView=view.findViewById(R.id.proimage)
             val name:TextView=view.findViewById(R.id.txtName)
-            val btnedt:ImageButton=view.findViewById(R.id.editButton)
-            val btndelete:ImageButton=view.findViewById(R.id.deleteButton)
 
            // image.setImageResource(arraylist[position].imageId)
             name.text = arraylist[position].Name
